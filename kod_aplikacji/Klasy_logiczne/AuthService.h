@@ -2,6 +2,9 @@
 #include <string>
 #include <libpq-fe.h>
 
+#include <QtSql/QSqlDatabase>
+
+
 class AuthService {
     PGconn* conn;
 public:
