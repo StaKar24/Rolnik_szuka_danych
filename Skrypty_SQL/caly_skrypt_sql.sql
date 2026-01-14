@@ -512,10 +512,10 @@ AS SELECT p.id_plonu,
     u.nazwa AS nazwa_uprawy,
     p.data_pozyskania,
     m.id_rolnika
-   FROM gospodarka_testy.plon p
-     JOIN gospodarka_testy.magazyn m ON m.id_magazynu = p.id_magazynu
-     LEFT JOIN gospodarka_testy.zwierze z ON z.id_zwierzecia = p.id_zwierzecia
-     LEFT JOIN gospodarka_testy.uprawa u ON u.id_uprawy = p.id_uprawy;
+   FROM gospodarka.plon p
+     JOIN gospodarka.magazyn m ON m.id_magazynu = p.id_magazynu
+     LEFT JOIN gospodarka.zwierze z ON z.id_zwierzecia = p.id_zwierzecia
+     LEFT JOIN gospodarka.uprawa u ON u.id_uprawy = p.id_uprawy;
 
 
 
