@@ -1,9 +1,35 @@
 Rolnik szyka danych to mój projekt na zajęcia z baz danych.
-Jest to aplikacja do pomocy w zarządzaniu gospodarstwem rolnych, pisana w PostgreSQl i CPP.
-(Jak będę mieć więcej do opisania będe to tutaj zamieszczać)
+Jest to aplikacja do pomocy w zarządzaniu gospodarstwem rolnych, pisana w PostgreSQl i CPP przy użyciu bibliotek QT, libpq i Qcustomplot.
+Wymaga ona plików dll libpq, Qt6Core, Qt6Gui, Gt6Sql, Gt6Widgets (i podstawowch plików qt).
 
-Branch overview:
-main -> główny
-development -> gałąż do pushowania przetesotwanych funkcji podstawowych (ostatnie miejsce edycji przed main)
-features -> gałąź do pisania i testowania wszystkich podstawoych funkcji
-experimental -> gałąźdo pisania i testowania funkcji eksperymentalnych ( nie zaplanowanych aktualnie) 
+------- Krótka instrukcja obsługi aplikacji RSD -------
+
+Aplikacja ma trzy lewele dostępu 
+-admina
+-rolnika
+-pracownika 
+
+Po zalogowaniu się (przy użyciu wcześniej dostanego loginu i hasła) wyświetla się odpowiedni "dashboard" aplikacji 
+
+(w przypadku roli rolnika) wyświetli się panel z 12 modułami
+
+!!! Dane wpisuje się ręcznie !!! chyba że użytkownik zgłosi prośbę o import danych 
+
+Dla nowego użytkownika zaleca się następujący setup
+- stworzenie magazynu (ich nazwy są ważne) - > (wystarczy wejść na dany moduł i klikną dodaj ___ )
+- stworzenia pól
+- dodanie budynków 
+- dodanie maszyn
+(reszta kolejności jest dowolna)
+Jest to ważne gdyż wszystkie dane w aplikacji są połączone i zależne od siebie więc by móc korzystać z każdego modułu, te informacje są najważniejsze
+
+
+
+W module zadań by przypisać zadanie do danego pracownika trzeba w jego informacjach podać jego imię i nazwisko
+Zmiana statusu i wykonanie zadania to znacznie dwie różne funkcje (wykonanie zmienia status na "wykonane") 
+Dodawanie upraw do zadania dzieje się za pomocą ID uprawy (wersja 1.0)
+
+Przy module zadania zalecane jest dodawanie jak największej ilości koniecznych informacji.
+Przy tworzeniu zadania siewu, zalecane jest używania nazewnictwa "Siew ____", w ten sposób informacje o siewie uprawy automatycznie się będą aktualizowały  
+
+W module statystyki pewne informacje dotyczą bierzącego roku więc się zresetują po nowym roku
